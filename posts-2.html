@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b07-gs-shirts-rc-2</title>
+  <meta name="description" content="t3b07-gs-shirts-rc-2에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://gangseo-review-shirt.hardcoreroom.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* Reset & Base */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ html {
+ font-size: 100%;
+ scroll-behavior: smooth;
+ }
+
+ body {
+ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+ background-color: #0d1117;
+ color: #f0f4f8;
+ line-height: 1.8;
+ letter-spacing: 0.02em;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+
+ /* Typography */
+ h1, h2, h3, h4, h5, h6 {
+ font-family: 'Georgia', 'Times New Roman', 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif;
+ font-weight: 700;
+ letter-spacing: 0.08em;
+ line-height: 1.25;
+ color: #f0f4f8;
+ }
+
+ h1 {
+ font-size: clamp(2.2rem, 5vw, 4.2rem);
+ letter-spacing: 0.12em;
+ margin-bottom: 1.2rem;
+ }
+
+ h2 {
+ font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+ letter-spacing: 0.1em;
+ margin-bottom: 2rem;
+ position: relative;
+ display: inline-block;
+ }
+
+ h2::after {
+ content: '';
+ display: block;
+ width: 60%;
+ height: 2px;
+ background: linear-gradient(90deg, #635bff, transparent);
+ margin-top: 0.75rem;
+ }
+
+ h3 {
+ font-size: 1.5rem;
+ letter-spacing: 0.06em;
+ margin-bottom: 1rem;
+ }
+
+ p {
+ margin-bottom: 1.5rem;
+ font-size: 1.05rem;
+ }
+
+ a {
+ color: #635bff;
+ text-decoration: none;
+ transition: opacity 0.2s ease;
+ }
+
+ a:hover {
+ opacity: 0.8;
+ }
+
+ /* Drop Caps */
+ .drop-cap::first-letter {
+ font-family: 'Georgia', 'Times New Roman', serif;
+ font-size: 4.2rem;
+ float: left;
+ line-height: 0.8;
+ margin-right: 0.5rem;
+ margin-top: 0.15rem;
+ color: #635bff;
+ font-weight: 700;
+ }
+
+ /* Layout */
+ .container {
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 0 48px;
+ }
+
+ /* Header & Navigation */
+ header {
+ padding: 32px 48px;
+ border-bottom: 1px solid rgba(99, 91, 255, 0.2);
+ background-color: #0d1117;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+
+ .header-inner {
+ max-width: 720px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .logo {
+ font-family: 'Georgia', 'Times New Roman', serif;
+ font-size: 1.3rem;
+ letter-spacing: 0.2em;
+ color: #f0f4f8;
+ text-transform: uppercase;
+ font-weight: 700;
+ border: 1px solid #635bff;
+ padding: 6px 18px;
+ }
+
+ nav {
+ display: flex;
+ gap: 32px;
+ align-items: center;
+ }
+
+ nav a {
+ font-size: 0.9rem;
+ letter-spacing: 0.1em;
+ color: #f0f4f8;
+ text-transform: uppercase;
+ font-weight: 500;
+ }
+
+ .nav-cta {
+ border: 1px solid #635bff;
+ padding: 8px 20px;
+ font-size: 0.85rem;
+ letter-spacing: 0.15em;
+ }
+
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ background: none;
+ border: none;
+ padding: 8px;
+ }
+
+ .hamburger span {
+ display: block;
+ width: 28px;
+ height: 1.5px;
+ background-color: #f0f4f8;
+ transition: all 0.3s ease;
+ }
+
+ /* Hero Section */
+ .hero {
+ position: relative;
+ min-height: 65vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ background: linear-gradient(135deg, #0d1117 0%, #1a1e2e 40%, #635bff40 70%, #0d1117 100%);
+ border-bottom: 1px solid rgba(99, 91, 255, 0.3);
+ margin-bottom: 80px;
+ }
+
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0; right: 0; bottom: 0;
+ background: radial-gradient(ellipse at 30% 50%, rgba(99, 91, 255, 0.15) 0%, transparent 60%),
+ radial-gradient(ellipse at 70% 50%, rgba(99, 91, 255, 0.08) 0%, transparent 50%);
+ pointer-events: none;
+ }
+
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ padding: 48px;
+ max-width: 720px;
+ }
+
+ .hero-subtitle {
+ font-size: 0.85rem;
+ letter-spacing: 0.3em;
+ text-transform: uppercase;
+ color: #635bff;
+ margin-bottom: 2rem;
+ font-weight: 600;
+ }
+
+ .hero h1 {
+ margin-bottom: 1.5rem;
+ }
+
+ .hero p {
+ font-size: 1.15rem;
+ max-width: 600px;
+ margin: 0 auto 2rem;
+ color: #c8d0dc;
+ }
+
+ .hero-cta {
+ display: inline-block;
+ border: 1px solid #635bff;
+ padding: 14px 48px;
+ font-size: 0.9rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: #f0f4f8;
+ background: transparent;
+ transition: background 0.3s ease, color 0.3s ease;
+ font-weight: 600;
+ }
+
+ .hero-cta:hover {
+ background: #635bff;
+ color: #0d1117;
+ opacity: 1;
+ }
+
+ /* Sections */
+ section {
+ margin-bottom: 80px;
+ }
+
+ .section-header {
+ margin-bottom: 40px;
+ }
+
+ /* Features / Services */
+ .feature-grid {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 32px;
+ }
+
+ .feature-item {
+ border-left: 2px solid #635bff;
+ padding-left: 24px;
+ }
+
+ .feature-item h3 {
+ font-size: 1.3rem;
+ }
+
+ .feature-item p {
+ font-size: 0.95rem;
+ color: #c8d0dc;
+ }
+
+ /* Review Cards */
+ .review-grid {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 32px;
+ }
+
+ .review-card {
+ border: 1px solid rgba(99, 91, 255, 0.25);
+ padding: 32px;
+ background: rgba(15, 18, 25, 0.6);
+ }
+
+ .review-card .review-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 1rem;
+ padding-bottom: 1rem;
+ border-bottom: 1px solid rgba(99, 91, 255, 0.1);
+ }
+
+ .review-card .review-author {
+ font-weight: 600;
+ font-size: 1rem;
+ letter-spacing: 0.05em;
+ }
+
+ .review-card .review-date {
+ font-size: 0.8rem;
+ color: #8a94a6;
+ letter-spacing: 0.05em;
+ }
+
+ .review-card .review-stars {
+ color: #635bff;
+ font-size: 1.1rem;
+ letter-spacing: 0.15em;
+ margin-bottom: 0.75rem;
+ }
+
+ .review-card .review-text {
+ font-size: 0.95rem;
+ color: #c8d0dc;
+ line-height: 1.8;
+ }
+
+ /* About / Info Section */
+ .info-block {
+ padding: 48px 0;
+ border-top: 1px solid rgba(99, 91, 255, 0.15);
+ border-bottom: 1px solid rgba(99, 91, 255, 0.15);
+ }
+
+ .info-block p {
+ font-size: 1rem;
+ }
+
+ /* Contact / CTA */
+ .contact-section {
+ text-align: center;
+ padding: 48px 0;
+ border: 1px solid rgba(99, 91, 255, 0.2);
+ background: rgba(15, 18, 25, 0.4);
+ }
+
+ .contact-section h2 {
+ margin-bottom: 1.5rem;
+ }
+
+ .contact-section .phone-link {
+ display: inline-block;
+ font-size: 1.6rem;
+ font-family: 'Georgia', 'Times New Roman', serif;
+ letter-spacing: 0.1em;
+ color: #f0f4f8;
+ border-bottom: 1px solid #635bff;
+ padding-bottom: 4px;
+ margin-bottom: 1rem;
+ }
+
+ .contact-section .phone-link:hover {
+ border-color: transparent;
+ }
+
+ .contact-section p {
+ color: #8a94a6;
+ font-size: 0.9rem;
+ }
+
+ /* Footer */
+ footer {
+ padding: 48px;
+ border-top: 1px solid rgba(99, 91, 255, 0.15);
+ text-align: center;
+ }
+
+ .footer-inner {
+ max-width: 720px;
+ margin: 0 auto;
+ }
+
+ footer p {
+ font-size: 0.8rem;
+ color: #5a6478;
+ letter-spacing: 0.08em;
+ margin-bottom: 0.5rem;
+ }
+
+ footer a {
+ color: #635bff;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+ .container {
+ padding: 0 24px;
+ }
+
+ header {
+ padding: 20px 24px;
+ }
+
+ .hamburger {
+ display: flex;
+ }
+
+ nav {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #0d1117;
+ flex-direction: column;
+ padding: 24px;
+ border-bottom: 1px solid rgba(99, 91, 255, 0.3);
+ gap: 20px;
+ align-items: flex-start;
+ }
+
+ nav.active {
+ display: flex;
+ }
+
+ nav a {
+ font-size: 1rem;
+ }
+
+ .hero {
+ min-height: 50vh;
+ }
+
+ .hero-content {
+ padding: 32px 24px;
+ }
+
+ h1 {
+ font-size: 2rem;
+ }
+
+ h2 {
+ font-size: 1.6rem;
+ }
+
+ .review-card {
+ padding: 24px;
+ }
+
+ .contact-section .phone-link {
+ font-size: 1.3rem;
+ }
+
+ .logo {
+ font-size: 1rem;
+ padding: 4px 14px;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .container {
+ padding: 0 16px;
+ }
+
+ header {
+ padding: 16px;
+ }
+
+ .hero {
+ min-height: 40vh;
+ }
+
+ .feature-item {
+ padding-left: 16px;
+ }
+
+ .review-card .review-header {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 6px;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b07-gs-shirts-rc-2">
+  <meta property="og:description" content="t3b07-gs-shirts-rc-2에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://gangseo-review-shirt.hardcoreroom.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-inner">
+ <div class="logo">Gangseo Shirts</div>
+ <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+ 
+ 
+ 
+ </button>
+ <nav id="nav-menu">
+ <a href="#about">About</a>
+ <a href="#reviews">Reviews</a>
+ <a href="#contact" class="nav-cta">Contact</a>
+ </nav>
+ </div>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 38개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0427.html">강서 셔츠룸 추천 확인하고 떠나는 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">강서 셔츠룸 추천 정보를 찾아보시는 분들은 보통 인원 수용 능력과 독립된 공간의 쾌적함을 최우선으로 고려합니다. 모임의 성격에 따라 필요한 음향 설비나 조명 시설이 다르기에 사전에 꼼꼼한 확인이 필</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0199.html">강서 셔츠룸 추천 확인 전 상수 마사지 추천정보 예약 실패 방지</a>
+        <p class="post-item__summary">강서 셔츠룸 추천을 찾으려다 엉뚱한 예약 시스템에 갇혀 시간을 허비하는 경우가 의외로 빈번합니다. 많은 이용자가 예약을 시도할 때 흔히 저지르는 실수는 업체의 운영 시간을 미리 확인하지 않는 것입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0200.html">강서 셔츠룸 추천 탐색 시 망원 노래방 추천정보 위치 접근성 체크</a>
+        <p class="post-item__summary">강서 셔츠룸 추천 정보를 탐색하는 과정에서 위치와 접근성은 이동 시간을 결정짓는 핵심 항목입니다. 방문자가 편안하게 도착할 수 있는 환경인지, 대중교통이나 자차 이용 시 불편함은 없는지 반드시 체크</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0201.html">강서 셔츠룸 추천 이용 전 홍대 노래방 추천정보 비교하기</a>
+        <p class="post-item__summary">친구들과 함께 번화가를 걷다가 급작스럽게 노래방을 찾아 헤매는 상황은 누구나 한 번쯤 겪어봤을 법한 일입니다. 분위기가 고조된 상태에서 아무 곳이나 들어갔다가 낭패를 보는 경우가 많아 사전에 정보 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0202.html">강서 셔츠룸 추천 관련 공덕 셔츠룸 추천정보 바로 알기</a>
+        <p class="post-item__summary">많은 이들이 셔츠룸이라는 공간에 대해 부정확한 정보를 바탕으로 오해를 하곤 합니다. 무조건 밤늦은 시간에만 활성화된다고 생각하기 쉽지만, 실제로는 시간대별로 이용 목적과 서비스의 성격이 확연히 구분</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0203.html">강서 셔츠룸 추천 고려 시 연남 유흥 추천정보 확인법</a>
+        <p class="post-item__summary">연남동 일대에서 모임을 계획할 때 가장 먼저 고려해야 할 요소는 구성원의 인원수와 연령대입니다. 강서 셔츠룸 추천 키워드를 탐색하시는 분들도 결국은 소중한 사람들과의 즐거운 시간을 위해 장소를 찾고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0204.html">강서 셔츠룸 추천 확인 후 마곡 가라오케 추천정보 분석</a>
+        <p class="post-item__summary">여러분은 평소에 가라오케를 선택할 때 어떤 기준을 가장 중요하게 생각하시나요? 단순히 집이나 회사와 가깝다는 이유만으로 장소를 정하고 있지는 않으신지 되돌아볼 필요가 있습니다. 강서 셔츠룸 추천 정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0205.html">강서 셔츠룸 추천 탐색 후 마곡 유흥 업소의 후기 신뢰도 판별 방법</a>
+        <p class="post-item__summary">많은 분들이 '강서 셔츠룸 추천'과 같은 키워드로 밤 문화를 검색하지만, 막상 마곡 지역의 유흥 업소를 찾다 보면 수많은 후기 정보 속에서 혼란을 겪기 마련입니다. 특히 온라인에 넘쳐나는 정보 중 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0206.html">강서 셔츠룸 추천 비교 후 합정 노래방 가격 판단 기준 및 서비스 분석</a>
+        <p class="post-item__summary">'강서 셔츠룸 추천' 같은 키워드를 통해 즐길 거리를 찾다가 합정 지역의 노래방을 고려하는 분들이 많습니다. 합정은 다양한 분위기의 노래방이 밀집해 있어 선택의 폭이 넓지만, 합리적인 가격에 최상의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0207.html">강서 셔츠룸 추천 검색 후 연남 클럽 방문 시 실패 없는 예약 절차</a>
+        <p class="post-item__summary">'강서 셔츠룸 추천' 정보 탐색을 넘어 연남동의 활기 넘치는 클럽 문화를 경험하고자 하는 분들이 많습니다. 하지만 인기 있는 연남 클럽들은 주말이나 특정 이벤트 시기에 방문객이 몰려 예약 없이는 입</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0208.html">강서 셔츠룸 추천 검색 후 합정 셔츠룸의 위치와 접근성 체크리스트</a>
+        <p class="post-item__summary">'강서 셔츠룸 추천' 정보를 알아보는 과정에서 합정 지역 셔츠룸에 대한 관심으로 이어지는 경우가 많습니다. 합정은 접근성이 뛰어나고 유동 인구가 많은 지역이지만, 막상 셔츠룸을 방문할 때는 위치와 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0209.html">강서 셔츠룸 추천 이용 시 공덕 가라오케 추천정보 확인법</a>
+        <p class="post-item__summary">오랜만에 만난 지인들과 저녁 모임을 계획하다 보면 장소 선택부터 난관에 부딪히곤 합니다. 특히 강서 셔츠룸 추천 검색을 통해 정보를 얻으려는 분들은 분위기와 서비스의 질을 가장 중요하게 고려하는 경</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">강서 셔츠룸 추천 정보</a>
+        <p class="post-item__summary">강서 지역에서 셔츠룸을 찾고 계신 분들을 위해 정보를 정리했습니다. 셔츠룸은 셔츠의 핏 수정, 기장 조정, 단추 교체, 다림질 및 관리 서비스를 제공하는 곳으로, 옷을 오래 깔끔하게 유지하려는 분들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">강서 셔츠룸 이해하기</a>
+        <p class="post-item__summary">셔츠룸은 일반 의류 매장이나 백화점과 달리, 고객이 직접 옷을 고르거나 착용해보는 서비스를 제공하지 않는 공간을 지칭하는 경우가 많습니다. 이러한 업종은 단순한 의류 판매를 넘어 특정 형태의 서비스</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">강서 셔츠룸 안내</a>
+        <p class="post-item__summary">셔츠룸은 특정 연령대를 주요 고객으로 삼는 안마 시설로, 강서区域内에서는 비교적 대중적인 형태로 자리 잡고 있습니다. 셔츠룸에서는 기본적인 근육 이완과 피로 회복을 목표로 한 서비스를 제공하며, 주</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">강서 셔츠룸 추천</a>
+        <p class="post-item__summary">셔츠룸은 편안한 휴식 공간으로, 깔끔한 내부 환경과 세심한 서비스로 운영되는 경우가 많습니다. 방문 전에 사전에 정보를 충분히 확인하면, 원하는 분위기를 갖춘 업소를 더 수월하게 찾을 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">강서 셔츠룸 추천 정보</a>
+        <p class="post-item__summary">강서 지역에서 셔츠룸을 찾을 때 고려해야 할 요소는 다양합니다.首先需要明确的是, 셔츠룸의 주요 특징과 서비스에 대한 정확한 이해가 선행되어야 하며, 이는 단순한 방문 기록이 아닌 객관적인 정보 검토</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-lqj8rf.html">강서 셔츠룸 추천</a>
+        <p class="post-item__summary">강서 지역에서 편안하고 고급스러운 분위기의 유흥 공간을 찾는 분들에게 셔츠룸은 꾸준히 사랑받는 선택지입니다. 깔끔하고 모던한 인테리어와 함께 차별화된 서비스를 제공하여 다양한 모임과 비즈니스 미팅,</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
